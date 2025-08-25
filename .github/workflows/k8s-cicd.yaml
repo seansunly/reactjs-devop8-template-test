@@ -6,6 +6,7 @@ on:
 # build docker image , push dockerhub
 env: 
   DOCKER_IMAGE_NAME: k8s-reactjs-dev09
+  USERNAME: sunlysean
 #  HELM_REPO: keoKAY/first-helm-argo-repo-dev09
 jobs: 
   ci-job: 
@@ -28,7 +29,7 @@ jobs:
           docker build -t ${{ secrets.USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{env.TAG }} .
       - name: Push to Dockerhub 
         run: |
-          docker push ${{ secrets.USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{env.TAG }}
+          docker push ${{ env.USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{env.TAG }}
       - name: Logout from Dockerhub 
         if: always()
         run: |
