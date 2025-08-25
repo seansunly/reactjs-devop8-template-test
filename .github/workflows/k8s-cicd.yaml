@@ -7,7 +7,7 @@ on:
 env: 
   DOCKER_IMAGE_NAME: k8s-reactjs-dev09
   USERNAME: sunlysean
-  HELM_REPO: https://github.com/seansunly/helm-dpl
+  HELM_REPO: seansunly/helm-dpl
 jobs: 
   ci-job: 
     runs-on: ubuntu-latest 
