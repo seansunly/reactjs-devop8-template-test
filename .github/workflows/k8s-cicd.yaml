@@ -4,13 +4,13 @@ on:
   push: 
     branches: ["master"]
 # build docker image , push dockerhub
-env: 
-  DOCKER_IMAGE_NAME: k8s-reactjs-dev09
-  HELM_REPO: keoKAY/first-helm-argo-repo-dev09
+# env: 
+#   DOCKER_IMAGE_NAME: k8s-reactjs-dev09
+#   HELM_REPO: keoKAY/first-helm-argo-repo-dev09
 jobs: 
   ci-job: 
     runs-on: ubuntu-latest 
-    environment: DOCKER_ENV
+    # environment: DOCKER_ENV
     steps: 
       - name: Checkout code 
         uses: actions/checkout@v3
