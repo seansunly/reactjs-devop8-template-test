@@ -50,10 +50,10 @@ jobs:
       # clone the helm repo remporarily 
       - name: Clone argocd repo 
         run: | 
-          git clone https://${{ secrets.GIT_TOKEN }}@github.com/${{ env.HELM_REPO }} helm_repo
+          git clone https://github.com/${{ env.HELM_REPO }} helm_repo 
       - name: Update Helm Chart 
         run: |
-          cd helm_repo
+          cd helm_repo/reactjs-plants-chart
 
           echo "Update repository username/imagename "
 
