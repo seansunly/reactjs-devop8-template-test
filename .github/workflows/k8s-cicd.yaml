@@ -38,6 +38,7 @@ jobs:
     needs: ci-job
     runs-on: ubuntu-latest 
     environment: HELM_ENV
+    environment: DOCKER_ENV
     steps: 
       - name: Install yq command 
         run: |
