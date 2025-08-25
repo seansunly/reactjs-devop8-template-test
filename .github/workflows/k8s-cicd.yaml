@@ -55,7 +55,6 @@ jobs:
       - name: Update Helm Chart 
         run: |
           cd helm_repo
-
           echo "Update repository username/imagename "
 
           yq -i ".image.repository=\"${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME}}\"" values.yaml
